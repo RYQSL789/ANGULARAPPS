@@ -1,0 +1,16 @@
+<div>
+  <h3>{{ product.title | uppercase }}</h3>
+  <img [src]="product.image" alt="" style="height:200px; max-width:80%">
+  <br />
+  <strong>{{ product.price | currency }}</strong>
+  <br />
+  <p>{{ product.description | slice:0:10 }}</p>
+  <br />
+  <div class="row">
+    <div class="col-md-6"><button (click)="addCart()" class="btn btn-success">Agregar  <span class="glyphicon glyphicon-shopping-cart"></span></button></div>
+    <div class="col-md-6"><a class="btn btn-info" [routerLink]="['/products', product.id]">Ver detalle</a></div>
+  </div>
+ 
+</div>
+<br />
+<br />

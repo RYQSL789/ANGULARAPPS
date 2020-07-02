@@ -1,0 +1,16 @@
+<div *ngIf="product">
+  <div class="row">
+    <div class="col-md-6">
+      <div>
+        <img [src]="product.image" alt="" style="width:80%">
+      </div>
+      <div>
+        <ul>
+          <li>Nombre: {{ product.title }}</li>
+          <li>Precio: {{ product.price | currency }}</li>
+        </ul>
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
